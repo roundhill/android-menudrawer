@@ -23,7 +23,8 @@ final class ActionBarHelperSherlock {
         if (sii.mUpIndicatorView != null) {
             sii.mUpIndicatorView.setImageDrawable(drawable);
             Drawable d = sii.mUpIndicatorView.getDrawable();
-            sii.mUpIndicatorView.setContentDescription(activity.getString(contentDescRes));
+			if (contentDescRes > 0)
+            	sii.mUpIndicatorView.setContentDescription(activity.getString(contentDescRes));
         }
     }
 
